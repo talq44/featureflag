@@ -19,7 +19,10 @@ let project = Project(
             ),
             sources: ["featureflag/Sources/**"],
             resources: ["featureflag/Resources/**"],
-            dependencies: []
+            dependencies: [
+                .external(name: "FirebaseAnalytics"),
+                .external(name: "FirebaseRemoteConfig")
+            ]
         ),
         .target(
             name: "featureflagTests",
