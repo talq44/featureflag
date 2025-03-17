@@ -7,7 +7,7 @@ let project = Project(
             name: "featureflag",
             destinations: .iOS,
             product: .app,
-            bundleId: "io.tuist.featureflag",
+            bundleId: "com.tqtest.featureflag",
             deploymentTargets: .iOS("15.0"),
             infoPlist: .extendingDefault(
                 with: [
@@ -25,7 +25,7 @@ let project = Project(
             name: "featureflagTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "io.tuist.featureflagTests",
+            bundleId: "com.tqtest.featureflagTests",
             infoPlist: .default,
             sources: ["featureflag/Tests/**"],
             resources: [],
