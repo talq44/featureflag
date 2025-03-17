@@ -23,7 +23,7 @@ struct LocalFlag: Codable {
         }
     }
     
-    var dic: [String: Any] {
+    internal var dic: [String: Any] {
         guard let data = try? JSONEncoder().encode(self) else { return [:] }
         
         guard let json = try? JSONSerialization.jsonObject(
@@ -36,7 +36,7 @@ struct LocalFlag: Codable {
         return dic
     }
     
-    static var dic: [String: Any] {
+    static internal var dic: [String: Any] {
         
         guard let info = LocalFlag.info else { return [:] }
         
